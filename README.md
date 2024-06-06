@@ -12,10 +12,8 @@ The dependencies for the progream are in requirements.txt file, following the in
 
 **Instructions**
 
-The entire code is in Navigation.ipynb. To execute, run upto cell "In [2]" (under 2. Examine the State and Action Spaces) sequentially, to load and examine the environment. You can explore the environment to see random actions being taken by executing the next cell. Then execute cells "In [13]" for class definition (QNetowrk, DQN Agent, ReplayBuffer classes), and "In [14]" to build the agent. You can set the following for trying variants of the regular DQN (The setting below is for Dueling DDQN, which gives the best results).
+The entire code is in Continuous_Control_submission.ipynb. To execute, run upto cell "In [4]" (under 2. Examine the State and Action Spaces) sequentially, to load and examine the environment. You can explore the environment to see random actions being taken by executing the next cell. Then execute cells "In [6]" for setting model parameters, class definition (Agent, Noise, Replay Buffer, Actor, Critic NN model classes), build the ddpg agent, train the model and finally plot the results. At the end, if the model is solved the best weights are saved in checkpoint_actor.pth and checkpoint_critic.pth files, which can be loaded later for execution without additional training.
 
-DOUBLE_DQN = True; PRIORITIZED_EXPERIENCE_REPLAY = False; DUELING_DQN = True;
-
-Then there are two options (1) To train - Execute the next cell "In [15]", which will train and output the status of training, ending with a plot of the score. This will save the best model in the 'checkpoint.pth' file (2) Alternatively, execute the model without training by loading the pretrained weights from the 'checkpoint.pth' file, by running the cell "In [16]"
+There are two environment options to load and train the model (1) Single agent, vs. (2) multi-agent (20), by (un)commenting the appropriate lines in cell "In [2]".
 
 Lastly, run the env.close() cell, when finished.
